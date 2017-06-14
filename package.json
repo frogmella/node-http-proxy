@@ -34,6 +34,7 @@
     "blanket": {
       "pattern": "lib/http-proxy"
     },
+    "old-dependencies": "if node -v | grep 'v0\\.' > /dev/null; then npm install socket.io@1.7.4; else echo 'No old depdendencies required.'; fi", 
     "test": "mocha test/*-test.js",
     "test-cov": "mocha --require blanket -R html-cov > cov/coverage.html"
   },
